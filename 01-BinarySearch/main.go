@@ -14,7 +14,7 @@ func SimpleBinarySearch(si []int, num int) bool {
 	//sort the slice
 	sort.Ints(si)
 	//print the sorted slice
-	fmt.Println(si)
+	//fmt.Println(si)
 
 	//for loop to loop through the slice till find the element
 	for _, value := range si {
@@ -29,7 +29,7 @@ func SimpleBinarySearch(si []int, num int) bool {
 
 //Enhance Binary Seach function 01
 //EnhanceBinarySearch using slice of slices
-func EnhanceBinarySearch(si []int, num int) bool {
+func EnhanceBinarySearch01(si []int, num int) bool {
 	//sort the int array
 	sort.Ints(si)
 
@@ -43,7 +43,7 @@ func EnhanceBinarySearch(si []int, num int) bool {
 	//check the value in the middle on the slice
 	if si[middleIndex] > num {
 		//print the slice start to middle index
-		fmt.Println(si[:middleIndex])
+		//fmt.Println(si[:middleIndex])
 		//range ove the slice of slice
 		for _, value := range si[:middleIndex] {
 			//compare the number to vlaue in the slice
@@ -53,7 +53,7 @@ func EnhanceBinarySearch(si []int, num int) bool {
 		}
 	} else {
 		//print the middle index to end of slice
-		fmt.Println(si[middleIndex:])
+		//fmt.Println(si[middleIndex:])
 		//range ove the slice of slice
 		for _, value := range si[middleIndex:] {
 			//compare the number to vlaue in the slice
@@ -73,6 +73,10 @@ func main() {
 	fmt.Println("The number is not in the slice \t:", SimpleBinarySearch(numbers, 69)) //print false
 
 	fmt.Println("*********** Enhance Binary Search 1 *******************")
-	fmt.Println("Found the number \t\t:", EnhanceBinarySearch(numbers, 5))               //print true
-	fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch(numbers, 100)) //print false
+	fmt.Println("Found the number \t\t:", EnhanceBinarySearch01(numbers, 5))               //print true
+	fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch01(numbers, 100)) //print false
+
+	/*	fmt.Println("*********** Enhance Binary Search 2 *******************")
+		fmt.Println("Found the number \t\t:", EnhanceBinarySearch02(numbers, 5))              //print true
+		fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch02(numbers, 99)) //print false*/
 }
