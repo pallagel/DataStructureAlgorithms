@@ -18,9 +18,9 @@ var tests = []struct {
 }
 
 //simpel unit test running using data table for simple binary search
-func TestBinarySearchBasic(t *testing.T) {
+func TestSearchBasic(t *testing.T) {
 	for _, v := range tests {
-		SimpleBinarySearch(v.data, v.answer)
+		SimpleSearch(v.data, v.answer)
 	}
 
 }
@@ -33,12 +33,12 @@ func TestEnhanceBinarySearch01(t *testing.T) {
 
 }
 
-//Benchmark test for SimpleBinary seach
-func BenchmarkSimpleBasic(b *testing.B) {
+//Benchmark test for Simple seach
+func BenchmarkSimpleSearch(b *testing.B) {
 	num := 50
 	si := []int{1, 4, 5, 67, 87, 65, 8}
 	for i := 0; i < b.N; i++ {
-		SimpleBinarySearch(si, num)
+		SimpleSearch(si, num)
 	}
 }
 
@@ -48,5 +48,14 @@ func BenchmarkEnhanceBinarySearch01(b *testing.B) {
 	si := []int{1, 4, 5, 67, 87, 65, 8}
 	for i := 0; i < b.N; i++ {
 		EnhanceBinarySearch01(si, num)
+	}
+}
+
+//Benchmark test for Enhance Binary seach
+func BenchmarkEnhanceBinarySearch02(b *testing.B) {
+	num := 50
+	si := []int{1, 4, 5, 67, 87, 65, 8}
+	for i := 0; i < b.N; i++ {
+		EnhanceBinarySearch02(si, num)
 	}
 }
