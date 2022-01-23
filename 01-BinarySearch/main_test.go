@@ -33,6 +33,14 @@ func TestEnhanceBinarySearch01(t *testing.T) {
 
 }
 
+//simpel unit test running using data table for enhance Binary search
+func TestEnhanceBinarySearch02(t *testing.T) {
+	for _, v := range tests {
+		EnhanceBinarySearch02(v.data, v.answer)
+	}
+
+}
+
 //Benchmark test for Simple seach
 func BenchmarkSimpleSearch(b *testing.B) {
 	num := 50
