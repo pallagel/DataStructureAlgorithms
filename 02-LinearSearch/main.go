@@ -29,5 +29,6 @@ func LinearSearch(si []int, num int) bool {
 
 func main() {
 	si := []int{10, 21, 3, 56, 66, 87, 4, 78, 90, 11}
-	LinearSearch(si, 99)
+	LinearSearch(si, 99) //item not in the slice
+	LinearSearch(si, 78) //item in the slice
 }
