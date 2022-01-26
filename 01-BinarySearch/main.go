@@ -103,14 +103,14 @@ func main() {
 	//declare a slice
 	numbers := []int{23, 4, 5, 67, 8, 99, 27}
 	//call the function to find the value
-	fmt.Println("Found the number \t\t:", SimpleSearch(numbers, 67))             //print true
-	fmt.Println("The number is not in the slice \t:", SimpleSearch(numbers, 69)) //print false
+	fmt.Println("Found the number \t\t:", SimpleSearch(sliceOfInt, 67))             //print true
+	fmt.Println("The number is not in the slice \t:", SimpleSearch(sliceOfInt, 69)) //print false
 
 	fmt.Println("*********** Enhance Binary Search 1 *******************")
-	fmt.Println("Found the number \t\t:", EnhanceBinarySearch01(numbers, 5))              //print true
-	fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch01(numbers, 24)) //print false
+	fmt.Println("Found the number \t\t:", EnhanceBinarySearch01(sliceOfInt, 5))              //print true
+	fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch01(sliceOfInt, 24)) //print false
 
 	fmt.Println("*********** Enhance Binary Search 2 *******************")
-	fmt.Println("Found the number \t\t:", EnhanceBinarySearch02(numbers, 99))              //print true
-	fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch02(numbers, 100)) //print false
+	fmt.Println("Found the number \t\t:", EnhanceBinarySearch02(sliceOfInt, 99))              //print true
+	fmt.Println("The number is not in the slice \t:", EnhanceBinarySearch02(sliceOfInt, 100)) //print false
 }
