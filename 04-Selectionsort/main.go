@@ -9,6 +9,9 @@ func main() {
 	si := []int{10, 21, 3, 56, 66, 87, 4, 78, 90, 11}
 	fmt.Println("Unsorted Slice : ", si)
 
+	//Selectionsort(si)
+	//fmt.Println("Sorted Slice : ", si)
+
 	SelectionsortSecond(si)
 	fmt.Println("Sorted Slice : ", si)
 
