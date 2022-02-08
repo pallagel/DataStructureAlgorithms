@@ -24,6 +24,8 @@ func divide(si []int) []int {
 	//split lef and right side
 	left := divide(si[:len(si)/2])
 	right := divide(si[len(si)/2:])
+	fmt.Println("LEFT ", left)
+	fmt.Println("RIGHT ", right)
 
 	//call to the mergeSort funcion
 	return mergeSort(left, right)
@@ -37,18 +39,23 @@ func mergeSort(left, right []int) []int {
 	for iPtr < len(left) && jPtr < len(right) {
 		if left[iPtr] < right[jPtr] {
 			result = append(result, left[iPtr])
+			fmt.Println("IF", result)
 			iPtr++
 		} else {
 			result = append(result, right[jPtr])
+			fmt.Println("ELSE", result)
 			jPtr++
 		}
 	}
 
 	for ; iPtr < len(left); iPtr++ {
 		result = append(result, left[iPtr])
+		fmt.Println("First FOR", result)
+
 	}
 	for ; jPtr < len(right); jPtr++ {
 		result = append(result, right[jPtr])
+		fmt.Println("Second FOR ", result)
 	}
 
 	return result
