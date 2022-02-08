@@ -3,6 +3,8 @@
 
 package main
 
+import "fmt"
+
 //Node struct to accept any form of data to store in a node
 type Node struct {
 	next *Node
@@ -33,8 +35,19 @@ func (l *List) InsertNode(data interface{}) {
 	}
 }
 
+//Display nodes in the linkedlist
+func (l *List) Display() {
+	list := l.head
+
+	for list != nil {
+		fmt.Println(list.data)
+		list = list.next
+	}
+}
+
 func main() {
 	linkedList := List{}
 	linkedList.InsertNode("Hello")
 	linkedList.InsertNode(10)
+	linkedList.Display()
 }
